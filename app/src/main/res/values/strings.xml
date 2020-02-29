@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">One-click Pick</string>
+    <string name="pick"><![CDATA[&PICK]]></string>
 </resources>
