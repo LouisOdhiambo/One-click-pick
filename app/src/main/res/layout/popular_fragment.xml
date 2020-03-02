@@ -5,48 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/fragmentsbg"
     android:weightSum="10"
     tools:context="com.moringaschool.one_clickpick.MainActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="300dp"
         android:layout_weight="2">
 
         <TextView
             android:id="@+id/popularTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:text="Popular Items"
-            android:textColor="@color/tabtextcolor"
-            android:textSize="34sp" />
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <GridView
+            android:id="@+id/imageGridView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/popularTitle"
+            android:columnWidth="100dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"></GridView>
 
     </RelativeLayout>
-
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        app:alignmentMode="alignMargins"
-        app:columnCount="2"
-        app:columnOrderPreserved="false"
-        android:padding="14dp"
-        app:rowCount="4">
-
-    </androidx.gridlayout.widget.GridLayout>
-
-    <!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="203dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="34dp"-->
-<!--        android:layout_marginTop="54dp"-->
-<!--        android:text="Popular items"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.076"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 </LinearLayout>

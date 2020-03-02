@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.orderNowButton) Button mOrderNowButton;
     @BindView(R.id.mainPageTabLayout) TabLayout tabLayout;
     @BindView(R.id.viewPagerMainPage) ViewPager viewPager;
+    @BindView(R.id.imageGridView) GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
