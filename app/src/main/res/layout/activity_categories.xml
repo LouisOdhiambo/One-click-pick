@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CategoriesActivity">
@@ -42,20 +46,20 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/electronicCategory"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:background="@color/darkpurple"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/phoneCategories"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeMessage"
         app:srcCompat="@drawable/electronics" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/phoneCategories"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
@@ -63,23 +67,23 @@
         android:layout_marginEnd="8dp"
         android:background="@color/startColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/electronicCategory"
         app:layout_constraintTop_toBottomOf="@+id/welcomeMessage"
         app:srcCompat="@drawable/phones_accesories" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/computersLaptops"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:background="@color/bluegrey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/electronicCategory"
         app:srcCompat="@drawable/computers_laptops" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/clothesAll"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
@@ -87,12 +91,12 @@
         android:layout_marginEnd="8dp"
         android:background="@color/darkred"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/computersLaptops"
+        app:layout_constraintTop_toBottomOf="@+id/electronicCategory"
         app:srcCompat="@drawable/allclothes" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/foodBeverages"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
@@ -101,11 +105,12 @@
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/computersLaptops"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/foodbeverages" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/officeCategory"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
@@ -114,8 +119,43 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/foodBeverages"
+        app:layout_constraintTop_toBottomOf="@+id/clothesAll"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/office" />
 
+    <ImageView
+        android:id="@+id/kidsToys"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodBeverages"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/kids" />
+
+    <ImageView
+        android:id="@+id/kitchenCooking"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/endColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kidsToys"
+        app:layout_constraintTop_toBottomOf="@+id/officeCategory"
+        app:srcCompat="@drawable/kitchen" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
