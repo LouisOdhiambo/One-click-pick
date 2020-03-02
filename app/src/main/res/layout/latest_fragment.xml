@@ -9,9 +9,26 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="195dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="54dp"
         android:text="latest deals"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/latestitemsimg"
+        android:layout_width="326dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/latestitems" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
