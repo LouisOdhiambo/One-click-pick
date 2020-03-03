@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.orderNowButton) Button mOrderNowButton;
     @BindView(R.id.mainPageTabLayout) TabLayout tabLayout;
     @BindView(R.id.viewPagerMainPage) ViewPager viewPager;
-    @BindView(R.id.imageGridView) GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
