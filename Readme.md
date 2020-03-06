@@ -7,6 +7,9 @@ One_click_pick is an android mobile platform where a user is able to buy items o
 expected to create an account to be able to sell or buy items. A user can also explore different categories
 of items on sell that includes popular, latest and all categories. Users can also add items to their wishlist.
 
+### CodeBeat grade
+[![codebeat badge](https://codebeat.co/badges/e7155347-4bfc-4a92-8952-d5a0b4f68f30)](https://codebeat.co/projects/github-com-louis-crypto-one-click-pick-master)
+
 ### Prerequisites
 + android studio
 + knowledge of java
