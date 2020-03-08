@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridView;
-import android.widget.Toast;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.orderNowButton) Button mOrderNowButton;
     @BindView(R.id.mainPageTabLayout) TabLayout tabLayout;
     @BindView(R.id.viewPagerMainPage) ViewPager viewPager;
+    @BindView(R.id.searchIcon) ImageView mSearchIcon;
+    @BindView(R.id.enterSearch) EditText mEnterSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mSearchIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searchedTerm = mEnterSearch.getText().toString();
+                Intent intent = new Intent(MainActivity.this, SearchedItemActivity.class);
+                intent.putExtra("searchedTerm", searchedTerm);
+                startActivity(intent);
+            }
+        });
+
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
