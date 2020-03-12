@@ -1,4 +1,4 @@
-package com.moringaschool.one_clickpick;
+package com.moringaschool.one_clickpick.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
