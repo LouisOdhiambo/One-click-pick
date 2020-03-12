@@ -3,7 +3,7 @@ package com.moringaschool.one_clickpick.network;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.moringaschool.one_clickpick.Constants.ETSY_BASE_URL;
+import static com.moringaschool.one_clickpick.models.Constants.ETSY_BASE_URL;
 
 public class EtsyClient {
     private static Retrofit retrofit = null;

@@ -13,11 +13,11 @@
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesTitle"
         app:srcCompat="@drawable/popular" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/categoriesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
