@@ -1,4 +1,4 @@
-package com.moringaschool.one_clickpick;
+package com.moringaschool.one_clickpick.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
+import com.moringaschool.one_clickpick.R;
+import com.moringaschool.one_clickpick.adapters.ViewPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         mSearchIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String searchedTerm = mEnterSearch.getText().toString();
+                String tag = mEnterSearch.getText().toString();
                 Intent intent = new Intent(MainActivity.this, SearchedItemActivity.class);
-                intent.putExtra("searchedTerm", searchedTerm);
+                intent.putExtra("tag", tag);
                 startActivity(intent);
             }
         });
