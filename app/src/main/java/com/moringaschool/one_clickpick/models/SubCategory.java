@@ -28,14 +28,13 @@ public class SubCategory implements Serializable, Parcelable
         }
 
         public SubCategory[] newArray(int size) {
-            return (new SubCategory[size]);
-        }
+            return (new SubCategory[size]); }
 
     }
     ;
     private final static long serialVersionUID = 5940752079258718854L;
 
-    protected SubCategory(Parcel in) {
+    private SubCategory(Parcel in) {
         this.id = ((String) in.readValue((String.class.getClassLoader())));
         this.name = ((String) in.readValue((String.class.getClassLoader())));
     }

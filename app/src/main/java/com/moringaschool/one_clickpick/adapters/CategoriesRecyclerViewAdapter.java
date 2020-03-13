@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
     public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<CategoriesRecyclerViewAdapter.CategoryItemsViewHolder> {
         private List<Category> mCategories;
         private Context mContext;
+        public String imageUrl = "https://images.unsplash.com/photo-1573674451487-3c66c2aad5ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80";
 
         public CategoriesRecyclerViewAdapter(Context context, List<Category> categories) {
             mContext = context;
@@ -47,7 +48,7 @@ import butterknife.ButterKnife;
         public class CategoryItemsViewHolder extends RecyclerView.ViewHolder{
             @BindView(R.id.categoriesImage) ImageView mCategoriesImageView;
             @BindView(R.id.categoriesTitle) TextView mCategoriesTitle;
-            @BindView(R.id.categoriesSecondTitle) TextView mCategoriesSecondTitle;
+//            @BindView(R.id.categoriesSecondTitle) TextView mCategoriesSecondTitle;
 
             private Context mContext;
 
@@ -59,8 +60,7 @@ import butterknife.ButterKnife;
 
             public void bindProducts(Category category){
                 mCategoriesTitle.setText(category.getName());
-                mCategoriesSecondTitle.setText(category.getId());
-                Picasso.get().load(category.getUrl()).into(mCategoriesImageView);
+                Picasso.get().load(imageUrl).into(mCategoriesImageView);
             }
         }
     }
