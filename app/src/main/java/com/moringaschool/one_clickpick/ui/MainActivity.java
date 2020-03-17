@@ -33,27 +33,27 @@ public class MainActivity extends AppCompatActivity {
         mOrderNowButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
                 startActivity(intent);
             }
         });
 
-        mSearchIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tag = mEnterSearch.getText().toString();
-                Intent intent = new Intent(MainActivity.this, SearchedItemActivity.class);
-                intent.putExtra("tag", tag);
-                startActivity(intent);
-            }
-        });
+//        mSearchIcon.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String beerName = mEnterSearch.getText().toString();
+//                Intent intent = new Intent(MainActivity.this, SearchedItemActivity.class);
+//                intent.putExtra("beerName", beerName);
+//                startActivity(intent);
+//            }
+//        });
 
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         adapter.addFragment(new FragmentPopular(), "Popular");
         adapter.addFragment(new FragmentLatest(), "Latest");
-        adapter.addFragment(new FragmentWishList(), "Wishlist");
+        adapter.addFragment(new FragmentCategories(), "Wish list");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

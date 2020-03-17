@@ -33,7 +33,7 @@ public class SearchedItemActivity extends AppCompatActivity {
     private ProductsRecyclerViewCustomAdapter mAdapter;
 
     @BindView(R.id.errorTextView) TextView mErrorTextView;
-    @BindView(R.id.progressBar) ProgressBar mProgressBar;
+    @BindView(R.id.progressBarRegister) ProgressBar mProgressBar;
 
     public List<Product> products;
 

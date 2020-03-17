@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "633656781664",
+    "firebase_url": "https://one-click-pick.firebaseio.com",
+    "project_id": "one-click-pick",
+    "storage_bucket": "one-click-pick.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633656781664:android:49a9e0a7801289b0e48c05",
+        "android_client_info": {
+          "package_name": "com.moringaschool.one_clickpick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633656781664-odobm0c6v4bn4tdtdvl2349i2a5i30kk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.one_clickpick",
+            "certificate_hash": "d9c878292e44d00f8a2ab87ef9096c779e269d5e"
+          }
+        },
+        {
+          "client_id": "633656781664-djrei0ng6mssng74l7if42vol4kfshcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJOLU_PO4f9fCQ8xfTKJOPk_uVCdtJs6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633656781664-djrei0ng6mssng74l7if42vol4kfshcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

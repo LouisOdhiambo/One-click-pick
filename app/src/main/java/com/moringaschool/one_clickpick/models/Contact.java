@@ -1,5 +1,5 @@
 
-package com.moringaschool.one_clickpick;
+package com.moringaschool.one_clickpick.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
