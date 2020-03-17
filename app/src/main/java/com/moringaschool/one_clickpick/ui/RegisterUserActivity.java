@@ -64,7 +64,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                 }
 
                 if(password.length() < 6 ){
-                    mPassword.setError("password must be 6 characters or more");
+                    mPassword.setError("password must be at least 6 characters or more");
                     return;
                 }
 
