@@ -31,7 +31,7 @@ public class RegisterUserActivity extends AppCompatActivity {
     @BindView(R.id.goToRegister) TextView mLoginText;
     @BindView(R.id.progressBarRegister) ProgressBar mProgressBar;
 
-    FirebaseAuth fAuth;
+    FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -40,13 +40,21 @@ public class RegisterUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_user);
         ButterKnife.bind(this);
 
-        fAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
 
-        if(fAuth.getCurrentUser() != null){
+        if(firebaseAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
+
+        mLoginText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+            }
+        });
 
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +78,7 @@ public class RegisterUserActivity extends AppCompatActivity {
 
                 mProgressBar.setVisibility(View.VISIBLE);
 
-                fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
