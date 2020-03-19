@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.moringaschool.one_clickpick.R;
 
-public class FragmentWishList extends Fragment {
+public class FragmentCategories extends Fragment {
     View view;
-    public FragmentWishList() {
+    public FragmentCategories() {
     }
 
     @Nullable

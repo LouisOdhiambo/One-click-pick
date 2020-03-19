@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/manythings" />
 
     <TextView
-        android:id="@+id/categoriesTitle"
+        android:id="@+id/categoriesDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="170dp"
@@ -25,15 +25,17 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/categoriesSecondTitle"
+        android:id="@+id/categoriesWebsiteUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
         android:layout_marginTop="80dp"
         android:padding="10dp"
-        android:text="TextView" />
+        android:drawableLeft="@drawable/ic_exit_icon"
+        android:text="View details" />
+
     <TextView
-        android:id="@+id/categoriesDescription"
+        android:id="@+id/categoriesTitle"
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

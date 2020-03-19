@@ -37,7 +37,7 @@ public class MainActivityInstrumentationTest {
         String userName = "Customer";
         String passWord = "confidential";
 
-        onView(withId(R.id.userEnteredName)).perform(typeText(userName)).perform(ViewActions.closeSoftKeyboard());
+        onView(withId(R.id.userEnteredEmail)).perform(typeText(userName)).perform(ViewActions.closeSoftKeyboard());
         onView(withId(R.id.userPassword)).perform(typeText(passWord)).perform(ViewActions.closeSoftKeyboard());
         try {
             Thread.sleep(250);
