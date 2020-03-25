@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.orderNowButton) Button mOrderNowButton;
     @BindView(R.id.mainPageTabLayout) TabLayout tabLayout;
     @BindView(R.id.viewPagerMainPage) ViewPager viewPager;
-    @BindView(R.id.searchIcon) ImageView mSearchIcon;
-    @BindView(R.id.enterSearch) EditText mEnterSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//        mSearchIcon.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String beerName = mEnterSearch.getText().toString();
-//                Intent intent = new Intent(MainActivity.this, SearchedItemActivity.class);
-//                intent.putExtra("beerName", beerName);
-//                startActivity(intent);
-//            }
-//        });
 
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());

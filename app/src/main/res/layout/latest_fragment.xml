@@ -11,7 +11,7 @@
         android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="10dp"
         android:text="latest deals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.074"

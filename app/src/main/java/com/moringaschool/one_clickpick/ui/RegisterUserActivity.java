@@ -33,6 +33,8 @@ public class RegisterUserActivity extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
 
+    private String mUserName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +88,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
                             Toast.makeText(RegisterUserActivity.this, "Error occurred" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
+                            mProgressBar.setVisibility(View.GONE);
                         }
                     }
                 });
