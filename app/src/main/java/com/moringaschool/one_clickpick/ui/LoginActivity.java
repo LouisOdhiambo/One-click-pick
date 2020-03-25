@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.userEnteredEmail) EditText mUserEmail;
     @BindView(R.id.userPassword) EditText mUserPassword;
     @BindView(R.id.progressBarLogin) ProgressBar mProgressBar;
+    @BindView(R.id.goToRegisterPage) TextView mGoToRegister;
     FirebaseAuth firebaseAuth;
 
 
@@ -36,6 +38,13 @@ public class LoginActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        mGoToRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RegisterUserActivity.class));
+            }
+        });
 
         mLogInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,11 +72,11 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(LoginActivity.this, "Login was successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "You have successfully logged in", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
                             Toast.makeText(LoginActivity.this, "Error occurred" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
+                            mProgressBar.setVisibility(View.GONE);
                         }
                     }
                 });
